@@ -76,106 +76,51 @@ Template Name: home
                     <button class="button2">Další články</button>
                 </div>
                 <div class="cards">
-                    <div class="card">
-                        <div class="card__top">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/images/bonus.png" alt="">
-                            <div class="card__top-info">
-                                <div class="card__top-title">Betano</div>
-                                <div class="card__top-rating">
-                                    <div class="rating">
-                                        <span class="star active" data-rating="1">&#9733;</span>
-                                        <span class="star active" data-rating="2">&#9733;</span>
-                                        <span class="star active" data-rating="3">&#9733;</span>
-                                        <span class="star active" data-rating="4">&#9733;</span>
-                                        <span class="star " data-rating="5">&#9733;</span>
+
+                <?php
+                    global $post;
+
+                    $myposts = get_posts([ 
+                        'numberposts' => -1,
+                    ]);
+
+                    if( $myposts ){
+                        foreach( $myposts as $post ){
+                            setup_postdata( $post );
+                            ?>
+                            <div class="card">
+                                <div class="card__top">
+                                <?php the_post_thumbnail(
+                                    array(230, 200)
+                                ); ?>
+                                    <div class="card__top-info">
+                                        <div class="card__top-title"><?php the_title(); ?></div>
+                                        <div class="card__top-rating">
+                                            <div class="rating">
+                                                <span class="star active" data-rating="1">&#9733;</span>
+                                                <span class="star active" data-rating="2">&#9733;</span>
+                                                <span class="star active" data-rating="3">&#9733;</span>
+                                                <span class="star active" data-rating="4">&#9733;</span>
+                                                <span class="star " data-rating="5">&#9733;</span>
+                                            </div>
+                                            <div class="rating__result">4.0</div>
+                                        </div>
                                     </div>
-                                    <div class="rating__result">4.0</div>
+                                </div>
+                                <!--<div class="card__desc">350 Free Spinů + 100 Kč bez vkladu+ Bonus na první vklad 100% až do 600 Kč do casina</div>-->
+                                <div class="card__bottom">
+                                    <button class="button1">Přehrát</button>
+                                    <!--<div class="card__bottom-link">
+                                        Přečtěte si více
+                                    </div>-->
                                 </div>
                             </div>
-                        </div>
-                        <!--<div class="card__desc">350 Free Spinů + 100 Kč bez vkladu+ Bonus na první vklad 100% až do 600 Kč do casina</div>-->
-                        <div class="card__bottom">
-                            <button class="button1">Přehrát</button>
-                            <!--<div class="card__bottom-link">
-                                Přečtěte si více
-                            </div>-->
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__top">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/images/bonus.png" alt="">
-                            <div class="card__top-info">
-                                <div class="card__top-title">Betano</div>
-                                <div class="card__top-rating">
-                                    <div class="rating">
-                                        <span class="star active" data-rating="1">&#9733;</span>
-                                        <span class="star active" data-rating="2">&#9733;</span>
-                                        <span class="star active" data-rating="3">&#9733;</span>
-                                        <span class="star active" data-rating="4">&#9733;</span>
-                                        <span class="star " data-rating="5">&#9733;</span>
-                                    </div>
-                                    <div class="rating__result">4.0</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--<div class="card__desc">350 Free Spinů + 100 Kč bez vkladu+ Bonus na první vklad 100% až do 600 Kč do casina</div>-->
-                        <div class="card__bottom">
-                            <button class="button1">Přehrát</button>
-                            <!--<div class="card__bottom-link">
-                                Přečtěte si více
-                            </div>-->
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__top">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/images/bonus.png" alt="">
-                            <div class="card__top-info">
-                                <div class="card__top-title">Betano</div>
-                                <div class="card__top-rating">
-                                    <div class="rating">
-                                        <span class="star active" data-rating="1">&#9733;</span>
-                                        <span class="star active" data-rating="2">&#9733;</span>
-                                        <span class="star active" data-rating="3">&#9733;</span>
-                                        <span class="star active" data-rating="4">&#9733;</span>
-                                        <span class="star " data-rating="5">&#9733;</span>
-                                    </div>
-                                    <div class="rating__result">4.0</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--<div class="card__desc">350 Free Spinů + 100 Kč bez vkladu+ Bonus na první vklad 100% až do 600 Kč do casina</div>-->
-                        <div class="card__bottom">
-                            <button class="button1">Přehrát</button>
-                            <!--<div class="card__bottom-link">
-                                Přečtěte si více
-                            </div>-->
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__top">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/images/bonus.png" alt="">
-                            <div class="card__top-info">
-                                <div class="card__top-title">Betano</div>
-                                <div class="card__top-rating">
-                                    <div class="rating">
-                                        <span class="star active" data-rating="1">&#9733;</span>
-                                        <span class="star active" data-rating="2">&#9733;</span>
-                                        <span class="star active" data-rating="3">&#9733;</span>
-                                        <span class="star active" data-rating="4">&#9733;</span>
-                                        <span class="star " data-rating="5">&#9733;</span>
-                                    </div>
-                                    <div class="rating__result">4.0</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--<div class="card__desc">350 Free Spinů + 100 Kč bez vkladu+ Bonus na první vklad 100% až do 600 Kč do casina</div>-->
-                        <div class="card__bottom">
-                            <button class="button1">Přehrát</button>
-                            <!--<div class="card__bottom-link">
-                                Přečtěte si více
-                            </div>-->
-                        </div>
-                    </div>
+                            <?php 
+                        }
+                    } 
+
+                    wp_reset_postdata(); // Сбрасываем $post
+                ?>
                 </div>
             </div>
         </div>
