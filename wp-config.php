@@ -20,22 +20,22 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'casino' );
+// define( 'DB_NAME', 'casino' );
 
-/** Database username */
-define( 'DB_USER', 'root' );
+// /** Database username */
+// define( 'DB_USER', 'root' );
 
-/** Database password */
-define( 'DB_PASSWORD', '' );
+// /** Database password */
+// define( 'DB_PASSWORD', '' );
 
-/** Database hostname */
-define( 'DB_HOST', 'localhost' );
+// /** Database hostname */
+// define( 'DB_HOST', 'localhost' );
 
-/** Database charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
+// /** Database charset to use in creating database tables. */
+// define( 'DB_CHARSET', 'utf8' );
 
-/** The database collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
+// /** The database collate type. Don't change this if in doubt. */
+// define( 'DB_COLLATE', '' );
 
 /**#@+
  * Authentication unique keys and salts.
@@ -84,6 +84,12 @@ define( 'WP_DEBUG', false );
 /* Add any custom values between this line and the "stop editing" line. */
 
 
+define('DB_NAME', 'xh512799_casino');
+define('DB_USER', 'xh512799_casino');
+define('DB_PASSWORD', '^@9Een5uM3');
+define('DB_HOST', 'xh512799.mysql.tools');
+define('DB_CHARSET', 'utf8mb4');
+define('DB_COLLATE', '');
 
 /* That's all, stop editing! Happy publishing. */
 
