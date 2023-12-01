@@ -4,14 +4,22 @@ Template Name: home
 */ 
 ?>
 
-<?php get_header() ?>        
-    <main class="main">
+<?php get_header() ?>  
+                    <?php   
+                        $main_banner_title = get_field('main_banner_title');
+                        $main_banner_description = get_field('main_banner_description');
+                        $main_banner_image_desktop = get_field('main_banner_image_desktop');
+                        $main_banner_image_mobile = get_field('main_banner_image_mobile');
+                    ?>      
+    <main class="main" style="background-image: url(<?php echo $main_banner_image_mobile; ?>)">
         <div class="container">
-            <div class="main__content">
+            <div class="main__content" style="background-image: url(<?php echo $main_banner_image_desktop; ?>)">
                 <div class="main__info">
-                    <h1>Nejlepší kasina v České republice v roce 2023</h1>
-                    <h4>Máte pochybnosti o poctivosti a spolehlivosti virtuálních heren? Pak byste měli věnovat pozornost našemu hodnocení "online kasina Česká republika", sestavenému na základě skutečných faktů a hodnocení, které odráží míru spolehlivosti, poctivosti populárních herních platforem.</h4>
+                    
+                    <h1><?php echo $main_banner_title; ?></h1>
+                    <h4><?php echo $main_banner_description; ?></h4>
                     <button class="button1">Přehrát</button>
+                    
                 </div>
             </div>
         </div>
