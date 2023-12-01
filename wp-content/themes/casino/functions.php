@@ -61,4 +61,9 @@
 
         return $data;
     }
+
+    add_image_size('thumbnail', 0, 0, false);
+    add_image_size('medium', 0, 0, false);
+    add_image_size('large', 0, 0, false);
+    add_image_size('full', 0, 0, false);
 ?>

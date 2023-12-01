@@ -32,46 +32,40 @@ Template Name: home
                     <button class="button2">Další články</button>
                 </div>
                 <div class="news">
-                    <div class="news__item">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/news1.png" alt="">
-                        <img class="pseudo" src="<?php bloginfo('template_url'); ?>/assets/images/pseudo.png" alt="">
-                        <div class="news__info">
-                            <a href="#" class="news__title"><h4>Růst popularity živých kasinových her: Trendy a budoucnost</h4></a>
-                            <div class="news__date"><h6>8 Ноября 2023</h6></div>
-                        </div>
-                    </div>
-                    <div class="news__item">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/news2.png" alt="">
-                        <img class="pseudo" src="<?php bloginfo('template_url'); ?>/assets/images/pseudo.png" alt="">
-                        <div class="news__info">
-                            <a href="#" class="news__title"><h4>Výhody a nevýhody mobilního hraní v online kasinech</h4></a>
-                            <div class="news__date"><h6>8 Ноября 2023</h6></div>
-                        </div>
-                    </div>
-                    <div class="news__item">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/news3.png" alt="">
-                        <img class="pseudo" src="<?php bloginfo('template_url'); ?>/assets/images/pseudo.png" alt="">
-                        <div class="news__info">
-                            <a href="#" class="news__title"><h4>Růst popularity živých kasinových her: Trendy a budoucnost</h4></a>
-                            <div class="news__date"><h6>8 Ноября 2023</h6></div>
-                        </div>
-                    </div>
-                    <div class="news__item">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/news3.png" alt="">
-                        <img class="pseudo" src="<?php bloginfo('template_url'); ?>/assets/images/pseudo.png" alt="">
-                        <div class="news__info">
-                            <a href="#" class="news__title"><h4>Růst popularity živých kasinových her: Trendy a budoucnost</h4></a>
-                            <div class="news__date"><h6>8 Ноября 2023</h6></div>
-                        </div>
-                    </div>
-                    <div class="news__item">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/news3.png" alt="">
-                        <img class="pseudo" src="<?php bloginfo('template_url'); ?>/assets/images/pseudo.png" alt="">
-                        <div class="news__info">
-                            <a href="#" class="news__title"><h4>Růst popularity živých kasinových her: Trendy a budoucnost</h4></a>
-                            <div class="news__date"><h6>8 Ноября 2023</h6></div>
-                        </div>
-                    </div>
+                    <?php
+                    $args = array(
+                        'post_type' => 'post', // Укажите тип поста, если это не посты
+                        'posts_per_page' => 5,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'category',
+                                'field'    => 'term_id',
+                                'terms'    => 3, // Замените 1 на ID вашей категории
+                            ),
+                        ),
+                    );
+
+                    $query = new WP_Query($args);
+
+                    if ($query->have_posts()) :
+                        while ($query->have_posts()) : $query->the_post();
+                            ?>
+                            <div class="news__item">
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <?php the_post_thumbnail('thumbnail'); ?>
+                                <?php endif; ?>
+                                <div class="news__info">
+                                    <a href="<?php the_permalink(); ?>" class="news__title"><h4><?php the_title(); ?></h4></a>
+                                    <div class="news__date"><h6><?php echo get_the_date('j F Y'); ?></h6></div>
+                                </div>
+                            </div>
+                        <?php
+                        endwhile;
+                        wp_reset_postdata(); // Сбрасываем данные о посте
+                    else :
+                        echo 'Нет записей в данной категории.';
+                    endif;
+                    ?>
                 </div>
             </div>
         </div>
@@ -86,15 +80,22 @@ Template Name: home
                 <div class="cards">
 
                 <?php
-                    global $post;
+                    $args = array(
+                        'post_type' => 'post', // Укажите тип поста, если это не посты
+                        'posts_per_page' => -1,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'category',
+                                'field'    => 'term_id',
+                                'terms'    => 2, // Замените 1 на ID вашей категории
+                            ),
+                        ),
+                    );
 
-                    $myposts = get_posts([ 
-                        'numberposts' => -1,
-                    ]);
+                    $query = new WP_Query($args);
 
-                    if( $myposts ){
-                        foreach( $myposts as $post ){
-                            setup_postdata( $post );
+                    if ($query->have_posts()) :
+                        while ($query->have_posts()) : $query->the_post();
                             ?>
                             <div class="card">
                                 <div class="card__top">
@@ -123,12 +124,13 @@ Template Name: home
                                     </div>-->
                                 </div>
                             </div>
-                            <?php 
-                        }
-                    } 
-
-                    wp_reset_postdata(); // Сбрасываем $post
-                ?>
+                            <?php
+                        endwhile;
+                        wp_reset_postdata(); // Сбрасываем данные о посте
+                    else :
+                        echo 'Нет записей в данной категории.';
+                    endif;
+                    ?>
                 </div>
             </div>
         </div>
