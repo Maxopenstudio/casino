@@ -25,40 +25,40 @@ Template Name: home
                 </div>
                 <div class="news">
                     <div class="news__item">
-                        <img src="<?php bloginfo('temolate_url'); ?>/assets/images/news1.png" alt="">
-                        <img class="pseudo" src="<?php bloginfo('temolate_url'); ?>/assets/images/pseudo.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/news1.png" alt="">
+                        <img class="pseudo" src="<?php bloginfo('template_url'); ?>/assets/images/pseudo.png" alt="">
                         <div class="news__info">
                             <a href="#" class="news__title"><h4>Růst popularity živých kasinových her: Trendy a budoucnost</h4></a>
                             <div class="news__date"><h6>8 Ноября 2023</h6></div>
                         </div>
                     </div>
                     <div class="news__item">
-                        <img src="<?php bloginfo('temolate_url'); ?>/assets/images/news2.png" alt="">
-                        <img class="pseudo" src="<?php bloginfo('temolate_url'); ?>/assets/images/pseudo.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/news2.png" alt="">
+                        <img class="pseudo" src="<?php bloginfo('template_url'); ?>/assets/images/pseudo.png" alt="">
                         <div class="news__info">
                             <a href="#" class="news__title"><h4>Výhody a nevýhody mobilního hraní v online kasinech</h4></a>
                             <div class="news__date"><h6>8 Ноября 2023</h6></div>
                         </div>
                     </div>
                     <div class="news__item">
-                        <img src="<?php bloginfo('temolate_url'); ?>/assets/images/news3.png" alt="">
-                        <img class="pseudo" src="<?php bloginfo('temolate_url'); ?>/assets/images/pseudo.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/news3.png" alt="">
+                        <img class="pseudo" src="<?php bloginfo('template_url'); ?>/assets/images/pseudo.png" alt="">
                         <div class="news__info">
                             <a href="#" class="news__title"><h4>Růst popularity živých kasinových her: Trendy a budoucnost</h4></a>
                             <div class="news__date"><h6>8 Ноября 2023</h6></div>
                         </div>
                     </div>
                     <div class="news__item">
-                        <img src="<?php bloginfo('temolate_url'); ?>/assets/images/news3.png" alt="">
-                        <img class="pseudo" src="<?php bloginfo('temolate_url'); ?>/assets/images/pseudo.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/news3.png" alt="">
+                        <img class="pseudo" src="<?php bloginfo('template_url'); ?>/assets/images/pseudo.png" alt="">
                         <div class="news__info">
                             <a href="#" class="news__title"><h4>Růst popularity živých kasinových her: Trendy a budoucnost</h4></a>
                             <div class="news__date"><h6>8 Ноября 2023</h6></div>
                         </div>
                     </div>
                     <div class="news__item">
-                        <img src="<?php bloginfo('temolate_url'); ?>/assets/images/news3.png" alt="">
-                        <img class="pseudo" src="<?php bloginfo('temolate_url'); ?>/assets/images/pseudo.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/news3.png" alt="">
+                        <img class="pseudo" src="<?php bloginfo('template_url'); ?>/assets/images/pseudo.png" alt="">
                         <div class="news__info">
                             <a href="#" class="news__title"><h4>Růst popularity živých kasinových her: Trendy a budoucnost</h4></a>
                             <div class="news__date"><h6>8 Ноября 2023</h6></div>
@@ -78,7 +78,7 @@ Template Name: home
                 <div class="cards">
                     <div class="card">
                         <div class="card__top">
-                            <img src="<?php bloginfo('temolate_url'); ?>/assets/images/bonus.png" alt="">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/images/bonus.png" alt="">
                             <div class="card__top-info">
                                 <div class="card__top-title">Betano</div>
                                 <div class="card__top-rating">
@@ -103,7 +103,7 @@ Template Name: home
                     </div>
                     <div class="card">
                         <div class="card__top">
-                            <img src="<?php bloginfo('temolate_url'); ?>/assets/images/bonus.png" alt="">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/images/bonus.png" alt="">
                             <div class="card__top-info">
                                 <div class="card__top-title">Betano</div>
                                 <div class="card__top-rating">
@@ -128,7 +128,7 @@ Template Name: home
                     </div>
                     <div class="card">
                         <div class="card__top">
-                            <img src="<?php bloginfo('temolate_url'); ?>/assets/images/bonus.png" alt="">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/images/bonus.png" alt="">
                             <div class="card__top-info">
                                 <div class="card__top-title">Betano</div>
                                 <div class="card__top-rating">
@@ -153,7 +153,7 @@ Template Name: home
                     </div>
                     <div class="card">
                         <div class="card__top">
-                            <img src="<?php bloginfo('temolate_url'); ?>/assets/images/bonus.png" alt="">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/images/bonus.png" alt="">
                             <div class="card__top-info">
                                 <div class="card__top-title">Betano</div>
                                 <div class="card__top-rating">
@@ -188,27 +188,27 @@ Template Name: home
                 </div>
                 <div class="categoryWall">
                     <a href="#" class="categoryWall__item">
-                        <img src="<?php bloginfo('temolate_url'); ?>/assets/images/catg1.png" alt="category">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/catg1.png" alt="category">
                         <h2>Česká online kasina</h2>
                     </a>
                     <a href="#" class="categoryWall__item">
-                        <img src="<?php bloginfo('temolate_url'); ?>/assets/images/catg2.png" alt="category">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/catg2.png" alt="category">
                         <h2>Online sázkové kanceláře</h2>
                     </a>
                     <a href="#" class="categoryWall__item">
-                        <img src="<?php bloginfo('temolate_url'); ?>/assets/images/catg3.png" alt="category">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/catg3.png" alt="category">
                         <h2>Hrací automaty</h2>
                     </a>
                     <a href="#" class="categoryWall__item">
-                        <img src="<?php bloginfo('temolate_url'); ?>/assets/images/catg4.png" alt="category">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/catg4.png" alt="category">
                         <h2>Kasinové bonusy a promo kódy</h2>
                     </a>
                     <a href="#" class="categoryWall__item">
-                        <img src="<?php bloginfo('temolate_url'); ?>/assets/images/catg5.png" alt="category">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/catg5.png" alt="category">
                         <h2>Online poker</h2>
                     </a>
                     <a href="#" class="categoryWall__item">
-                        <img src="<?php bloginfo('temolate_url'); ?>/assets/images/catg6.png" alt="category">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/catg6.png" alt="category">
                         <h2>Novinky</h2>
                     </a>
                 </div>

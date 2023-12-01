@@ -97,16 +97,16 @@
                     <div class="footer__bottom-text">Materiály na těchto stránkách jsou určeny pro osoby starší 21 let (21+). Účast na hazardních hrách může vést k závislosti na hazardních hrách. Dodržujte pravidla (zásady) zodpovědného hraní hazardních her. Pokud se objeví první příznaky závislosti, neprodleně kontaktujte odborníka. Pamatujte, že účast na hazardních hrách nemůže být zdrojem příjmů ani alternativou k práci. Informační zdroj meta.ua neprovádí hry o skutečné a/nebo virtuální peníze, stejně jako stránky nepřijímají žádnou formu plateb za sázky a jiné platby, které souvisejí / mohou souviset s hazardními hrami, sázkovými kancelářemi nebo totalizátory. Veškeré materiály na informačním zdroji meta.ua jsou zveřejněny pouze pro informační účely.</div>
                     <ul class="footer__bottom-list">
                         <li class="footer__bottom-list__item">
-                            <img src="images/partner1.svg" alt="">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/images/partner1.svg" alt="">
                         </li>
                         <li class="footer__bottom-list__item">
-                            <img src="images/partner2.svg" alt="">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/images/partner2.svg" alt="">
                         </li>
                         <li class="footer__bottom-list__item">
-                            <img src="images/partner3.svg" alt="">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/images/partner3.svg" alt="">
                         </li>
                         <li class="footer__bottom-list__item">
-                            <img src="images/partner4.svg" alt="">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/images/partner4.svg" alt="">
                         </li>
                     </ul>
                     <div class="footer__bottom-text">Copyright © Liga iGaming 2023 Все права защищены</div>
