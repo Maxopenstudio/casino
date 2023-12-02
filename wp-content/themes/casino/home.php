@@ -125,12 +125,12 @@ Template Name: home
                                 </div>
                             </div>
                             <?php
-                        endwhile;
-                        wp_reset_postdata(); // Сбрасываем данные о посте
-                    else :
-                        echo 'Нет записей в данной категории.';
-                    endif;
-                    ?>
+                                endwhile;
+                                wp_reset_postdata(); // Сбрасываем данные о посте
+                            else :
+                                echo 'Нет записей в данной категории.';
+                            endif;
+                            ?>
                 </div>
             </div>
         </div>
@@ -142,30 +142,38 @@ Template Name: home
                     <div class="sectionTitle">Sekce webu</div>
                 </div>
                 <div class="categoryWall">
-                    <a href="#" class="categoryWall__item">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/catg1.png" alt="category">
-                        <h2>Česká online kasina</h2>
-                    </a>
-                    <a href="#" class="categoryWall__item">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/catg2.png" alt="category">
-                        <h2>Online sázkové kanceláře</h2>
-                    </a>
-                    <a href="#" class="categoryWall__item">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/catg3.png" alt="category">
-                        <h2>Hrací automaty</h2>
-                    </a>
-                    <a href="#" class="categoryWall__item">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/catg4.png" alt="category">
-                        <h2>Kasinové bonusy a promo kódy</h2>
-                    </a>
-                    <a href="#" class="categoryWall__item">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/catg5.png" alt="category">
-                        <h2>Online poker</h2>
-                    </a>
-                    <a href="#" class="categoryWall__item">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/catg6.png" alt="category">
-                        <h2>Novinky</h2>
-                    </a>
+                <?php
+                    $args = array(
+                        'post_type' => 'post', // Укажите тип поста, если это не посты
+                        'posts_per_page' => 6,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'category',
+                                'field'    => 'term_id',
+                                'terms'    => 5, // Замените 1 на ID вашей категории
+                            ),
+                        ),
+                    );
+
+                    $query = new WP_Query($args);
+
+                    if ($query->have_posts()) :
+                        while ($query->have_posts()) : $query->the_post();
+                            ?>
+                                
+                                <a href="#" class="categoryWall__item">
+                                <?php the_post_thumbnail(
+                                    
+                                ); ?>
+                                    <h2><?php the_title(); ?></h2>
+                                </a>
+                                <?php
+                                endwhile;
+                                wp_reset_postdata(); // Сбрасываем данные о посте
+                            else :
+                                echo 'Нет записей в данной категории.';
+                            endif;
+                            ?>
                 </div>
             </div>
         </div>

@@ -66,4 +66,14 @@
     add_image_size('medium', 0, 0, false);
     add_image_size('large', 0, 0, false);
     add_image_size('full', 0, 0, false);
+
+    function remove_paragraphs_from_content($content) {
+        // Удаляем оборачивание контента в тег <p>
+        $content = preg_replace('/<p>(.*?)<\/p>/', '$1', $content);
+    
+        return $content;
+    }
+    
+    add_filter('the_content', 'remove_paragraphs_from_content', 20);
+    
 ?>
